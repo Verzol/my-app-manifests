@@ -15,6 +15,6 @@ spec:
       containers:
         - name: app
           # Đây là image "mặc định" ban đầu, chúng ta sẽ tự động cập nhật nó
-          image: ghcr.io/verzol/my-simple-app:af0f394
+          image: ghcr.io/verzol/my-simple-app:cf7bb00
           ports:
             - containerPort: 80
