@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-simple-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-simple-app
+  template:
+    metadata:
+      labels:
+        app: my-simple-app
+    spec:
+      containers:
+        - name: app
+          # Đây là image "mặc định" ban đầu, chúng ta sẽ tự động cập nhật nó
+          image: ghcr.io/Verzol/my-simple-app:initial
+          ports:
+            - containerPort: 80
